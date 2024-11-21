@@ -5,9 +5,22 @@
 
 body {
     color: red;
+    font-family: $teen;
+    font-weight: 400;
 }
 
 .container {
-    max-width: 1070px;
+    max-width: 1170px;
     margin: 0 auto;
+}
+
+.hero-background-wrapper {
+    background: linear-gradient(315deg, #223114 0%, #6a9a3c 13.74%, #537433 29.32%, #1e2b13 55.21%, #000 100%);
+    padding-top: 36.5px;
+    position: relative;
+    height: 1080px;
+}
+
+.hero-container {
+    position: absolute;
 }

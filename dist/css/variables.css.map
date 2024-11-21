@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"variables.css","sourcesContent":[]}
+{"version":3,"sources":["variables.scss"],"names":[],"mappings":"AAAQ,kGACA","file":"variables.css","sourcesContent":["@import url(https://db.onlinewebfonts.com/c/02cbb7a31cfe23290e89f1316ea8886f?family=October+Crow);\r\n@import url(https://db.onlinewebfonts.com/c/800249dca51965ef8adbfa527c330d6f?family=Teen);\r\n\r\n\r\n$october-crow: 'October Crow', sans-serif;\r\n$teen: 'Teen', sans-serif;\r\n$lemon-green: #e4f357;\r\n$dark-green: #1f261d;"]}

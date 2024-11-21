@@ -1,13 +1,32 @@
+@import "./variables.scss";
+
 .header {
+    font-size: 18px;
+    line-height: 167%;
+    color: $lemon-green;
+    background: transparent;
+    position: relative;
+    z-index: 10;
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__menu-list-wrapper ul {
         display: flex;
         gap: 72px;
+        list-style: none;
     }
     &__button {
+        font-family: $teen;
+        font-weight: 700;
+        font-size: 16px;
+        color: #1f261d;
+        border-radius: 4px;
+        padding: 10px 32px;
         margin-left: 52px;
+        width: 115px;
+        height: 40px;
+        background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
     }
 }
