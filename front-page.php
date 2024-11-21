@@ -41,7 +41,54 @@
     </section>
     <section class="section new-games-section">
         <div class="container">
-            new games
+            <h5>Discover the Latest Slot Games</h5>
+            <p class="section new-games-section__description">Immerse yourself in magic and adventure with the latest games from MaxterCluster</p>
+            <div class="new-games-section__cards-container">
+                <?php
+                    if( have_rows('game_card') ):
+                        while( have_rows('game_card') ) : the_row();
+                            $game_card_name = get_sub_field('game_card_name');
+                            $game_card_image = get_sub_field('game_card_image');
+                            $game_card_provider = get_sub_field('game_card_provider');
+                            $game_card_rtp = get_sub_field('game_card_rtp');
+                            $game_card_volatility = get_sub_field('game_card_volatility');
+                            $game_card_several_ways = get_sub_field('game_card_several_ways');
+                            $game_card_start_to_play_link = get_sub_field('game_card_start_to_play_link');
+                ?>
+                    <div class="new-games-section__card">
+                        <p class="new-games-section__card-title"><?php echo $game_card_name; ?></p>
+                        <?php 
+                            if( !empty( $game_card_image ) ): ?>
+                                <img src="<?php echo esc_url($game_card_image['url']); ?>" alt="<?php echo esc_attr($game_card_image['alt']); ?>" />
+                        <?php endif; ?>
+                        <div class="new-games-section__card-text">
+                            <div class="new-games-section__card-parameter-value">
+                                <p>Provider:</p>
+                                <p><?php echo $game_card_provider; ?></p>
+                            </div>
+                            <div class="new-games-section__card-parameter-value">
+                                <p>Rtp:</p>
+                                <p><?php echo $game_card_rtp; ?></p>
+                            </div>
+                            <div class="new-games-section__card-parameter-value">
+                                <p>Volatility:</p>
+                                <p><?php echo $game_card_volatility; ?></p>
+                            </div>
+                            <div class="new-games-section__card-parameter-value">
+                                <p>Several ways:</p>
+                                <p><?php echo $game_card_several_ways; ?></p>
+                            </div>
+                        </div>
+                        <div class="new-games-section__card-link">
+                            <a href="<?php echo $game_card_start_to_play_link; ?>">Start to play</a>
+                        </div>
+                    </div>
+
+                <?php
+                    endwhile;
+                    endif;
+                ?>
+            </div>
         </div>
     </section>
 </main>

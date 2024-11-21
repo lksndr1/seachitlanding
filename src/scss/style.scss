@@ -9,12 +9,17 @@ body {
     font-weight: 400;
 }
 
+section {
+    padding: 150px 0;
+}
+
 h5 {
     font-family: $october-crow;
     font-weight: 400;
     font-size: 51px;
     line-height: 120%;
     color: $lemon-green;
+    margin-bottom: 20px;
 }
 
 p {
@@ -45,6 +50,7 @@ p {
 .hero-section {
     position: relative;
     z-index: 2;
+    padding: 0;
     &__content {
         width: 700px;
         margin-top: 241.5px;
@@ -94,16 +100,13 @@ p {
 }
 
 .home-section {
-    background-color: $dark-green;
+    background-color: $black-green-bg;
     &__flex-wrapper {
         display: flex;
         gap: 100px;
-        padding: 150px 50px;
+        padding: 0 50px;
         &__description {
             margin: auto 0 auto 30px;
-            h5 {
-                margin-bottom: 20px;
-            }
             p {
                 margin-bottom: 60px;
             }
@@ -121,5 +124,64 @@ p {
                 margin-right: 30px;
             }
         }
+    }
+}
+
+.new-games-section {
+    background-color: $dark-green;
+    text-align: center;
+    &__description {
+        width: 470px;
+        margin: 0 auto 60px;
+    }
+    &__cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 40px;
+        justify-content: center;
+    }
+    &__card {
+        border-radius: 20px;
+        padding: 40px 0px;
+        width: 370px;
+        background-color: $black-green-bg;
+    }
+    &__card-title {
+        font-family: $teen;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 125%;
+        text-align: center;
+        color: $lemon-green;
+        margin-bottom: 30px;
+    }
+    &__card-text {
+        padding: 30px 40px 30px;
+    }
+    &__card-parameter-value {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        p:not(:first-child) {
+            color: #fff;
+        }
+    }
+    &__card-link {
+        text-align: center;
+        font-family: $teen;
+        font-weight: 700;
+        font-size: 16px;
+        color: $dark-green;
+        border-radius: 4px;
+        width: 310px;
+        
+        margin: 0 auto;
+        padding: 14px 0;
+        background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
     }
 }
