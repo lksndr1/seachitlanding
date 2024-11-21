@@ -179,7 +179,6 @@ p {
         color: $dark-green;
         border-radius: 4px;
         width: 310px;
-        
         margin: 0 auto;
         padding: 14px 0;
         background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
@@ -211,5 +210,82 @@ p {
                 margin-right: 30px;
             }
         }
+    }
+}
+
+.best-section {
+    background-color: $dark-green;
+    text-align: center;
+    &__description {
+        width: 470px;
+        margin: 0 auto 60px;
+    }
+    &__cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__card {
+        display: flex;
+        gap: 60px;
+        background-color: $black-green-bg;
+        padding: 70px;
+        border-radius: 20px;
+        &__text-features-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 66px;
+            column-gap: 40px;
+            row-gap: 10px;
+            margin-bottom: 50px;
+        }
+        &__text-feature {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        svg {
+            margin: 4px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__buttons-container{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        &__view-more {
+            text-align: center;
+            font-family: $teen;
+            font-weight: 700;
+            font-size: 16px;
+            color: $dark-green;
+            border-radius: 4px;
+            width: 146px;
+            padding: 14px 0;
+            background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
+        }
+        &__reviews {
+            font-weight: 700;
+            font-size: 16px;
+            background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-left: 32px;
+        }
+    }
+    &__card__text h4 {
+        font-family: $teen;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 128%;
+        color: $lemon-green;
+        text-align: left;
+        margin-bottom: 30px;
     }
 }

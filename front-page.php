@@ -107,6 +107,70 @@
             </div>
         </div>
     </section>
+    <section class="section best-section">
+        <div class="container">
+            <h5>Explore the Best Slot Games</h5>
+            <p class="section best-section__description">Discover the most magical MaxterCluster games in detail through our expert reviews.</p>
+            <div class="best-section__cards-container">
+                <?php
+                    if( have_rows('best_games') ):
+                        while( have_rows('best_games') ) : the_row();
+                            $best_game_image = get_sub_field('best_game_image');
+                            $best_game_title = get_sub_field('best_game_title');
+                            $best_game_features = get_sub_field('best_game_features');
+                            $best_game_view_more_link = get_sub_field('best_game_view_more_link');
+                            $best_game_review_link = get_sub_field('best_game_review_link');
+                ?>
+                <div class="best-section__card">
+                    <?php 
+                        if( !empty( $best_game_image ) ): ?>
+                            <img src="<?php echo esc_url($best_game_image['url']); ?>" alt="<?php echo esc_attr($best_game_image['alt']); ?>" />
+                    <?php endif; ?>
+                    <div class="best-section__card__text">
+                        <?php
+                            if( !empty( $best_game_title ) ): ?>
+                                <h4><?php echo $best_game_title; ?></h4>
+                        <?php endif; ?>
+                        <div class="best-section__card__text-features-container">
+                            <?php 
+                                if( have_rows('best_game_features') ):
+                                    while( have_rows('best_game_features') ) : the_row();
+                                        $best_game_feature = get_sub_field('best_game_feature');
+                            ?>
+                            <div class="best-section__card__text-feature">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7045 4.15347C17.034 4.4045 17.0976 4.87509 16.8466 5.20457L8.84657 15.7046C8.71541 15.8767 8.51627 15.9838 8.30033 15.9983C8.08439 16.0129 7.87271 15.9334 7.71967 15.7804L3.21967 11.2804C2.92678 10.9875 2.92678 10.5126 3.21967 10.2197C3.51256 9.92682 3.98744 9.92682 4.28033 10.2197L8.17351 14.1129L15.6534 4.29551C15.9045 3.96603 16.3751 3.90243 16.7045 4.15347Z" fill="#E4F357" />
+                                </svg>
+                                <p><?php echo $best_game_feature; ?></p>
+                            </div>
+                            <?php
+                                endwhile;
+                                endif;
+                            ?>
+                        </div>
+                        <div class="best-section__card__buttons-container">
+                            <div class="best-section__card__view-more">
+                                <?php
+                                    if( !empty( $best_game_view_more_link ) ): ?>
+                                        <a href="<?php echo $best_game_view_more_link; ?>">View More</a>
+                                <?php endif; ?>
+                            </div>
+                            <div class="best-section__card__reviews">
+                                <?php
+                                    if( !empty( $best_game_review_link ) ): ?>
+                                        <a href="<?php echo $best_game_review_link; ?>">Reviews</a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    endwhile;
+                    endif;
+                ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
