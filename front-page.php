@@ -91,6 +91,22 @@
             </div>
         </div>
     </section>
+    <section class="section magic-section">
+        <div class="container">
+            <div class="magic-section__flex-wrapper">
+                <div class="magic-section__flex-wrapper__description">
+                    <h5>The Magic of Maxter Cluster at a Glance</h5>
+                    <p>Discover the most exciting and distinctive feature of Maxtercluster at a glance. Immerse yourself in the magic and fun that only Maxtercluster can offer you.</p>
+                    <button>Read more</button>
+                </div>
+                <?php 
+                    $image = get_field('magic_section_image');
+                    if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
