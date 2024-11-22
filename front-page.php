@@ -227,6 +227,42 @@
             </div>
         </div>
     </section>
+    <section id='faqs' class="section stories-section">
+        <div class="container">
+            <div class="stories-section__description">
+                <h5>Shared Magical Experiences</h5>
+                <p>Their stories will take you on a journey full of magic and emotion.</p>
+            </div>
+            <div class="stories-section__stories-container">
+                <?php
+                    if( have_rows('stories') ):
+                        while( have_rows('stories') ) : the_row();
+
+                            $story = get_sub_field('story');
+                            $photo = get_sub_field('photo');
+                            $name = get_sub_field('name');
+                            $level = get_sub_field('level');
+                            ?>
+                            <div class="stories-section__item">
+                                <p class="stories-section__item__story"><?php echo $story; ?></p>
+                                <div class="stories-section__item__user-info-container">
+                                    <?php 
+                                        if( !empty( $photo ) ): ?>
+                                            <img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+                                    <?php endif; ?>
+                                    <div>
+                                        <p class="stories-section__item__user-info-container__name"><?php echo $name; ?></p>
+                                        <p class="stories-section__item__user-info-container__level"><?php echo $level; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        endwhile;
+                    endif;
+                ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
