@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+.footer {
+    padding: 150px 0;
+    background-color: $black-green-bg;
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__about-us h3 {
+        margin-bottom: 30px;
+    }
+    &__about-us p {
+        width: 470px;
+    }
+    &__menu {
+        display: flex;
+        gap: 30px;
+        h3 {
+            margin-bottom: 30px;
+        }
+        &__links,
+        &__networks {
+            width: 170px;
+        }
+    }
+    &__date {
+        text-align: center;
+        &::before {
+            content: '';
+            display: block;
+            border: 1px solid $gray-text;
+            width: 1170px;
+            height: 0px;
+            opacity: 0.3;
+            margin: 110px 0 30px;
+        }
+    }
+}
+
+.footer-menu li {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $gray-text;
+}

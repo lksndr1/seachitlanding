@@ -35,7 +35,8 @@ function wp_search_it_menus()
 {
     $locations = array(
         'header' => __('Header Menu', 'wp_search_it'),
-        'footer' => __('Footer Menu', 'wp_search_it'),
+        'footer_1' => __('Footer Menu 1', 'wp_search_it'),
+        'footer_2' => __('Footer Menu 2', 'wp_search_it'),
     );
 
     register_nav_menus($locations);

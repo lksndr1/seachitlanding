@@ -4,7 +4,6 @@
 @import "./reset.scss";
 
 body {
-    color: red;
     font-family: $teen;
     font-weight: 400;
 }
@@ -20,6 +19,13 @@ h5 {
     line-height: 120%;
     color: $lemon-green;
     margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 125%;
+    color: $lemon-green;
 }
 
 p {
