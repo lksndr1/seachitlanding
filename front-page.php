@@ -3,7 +3,7 @@
     <?php
         get_header();
     ?>
-    <section class='section hero-section'>
+    <section id='home' class='section hero-section'>
         <div class='container'>
             <div class='hero-section__content'>
                 <h1 class='hero-section__text'>Embark on a magical adventure</h1>
@@ -39,7 +39,7 @@
             </div>
         </div>
     </section>
-    <section class="section new-games-section">
+    <section id='newgames' class="section new-games-section">
         <div class="container">
             <h5>Discover the Latest Slot Games</h5>
             <p class="section new-games-section__description">Immerse yourself in magic and adventure with the latest games from MaxterCluster</p>
@@ -171,7 +171,7 @@
             </div>
         </div>
     </section>
-    <section class="section how-to-play">
+    <section id='howtoplay' class="section how-to-play">
         <div class="how-to-play__container">
             <div class="how-to-play__video-wrapper">
                 <button class="how-to-play__play-button" onclick="playVideo(this)">
@@ -193,6 +193,38 @@
                     </iframe>
                 </div>
             </div>            
+        </div>
+    </section>
+    <section id='faqs' class="section faqs-section">
+        <div class="container">
+            <div class="faqs-section__description">
+                <h5>Answers to your Magical Questions</h5>
+                <p>Find the answers you need here to fully enjoy your magical gaming experience.</p>
+            </div>
+            <div class="faqs-section__qa-block">
+                <?php
+                    if( have_rows('faqs_questions-answers') ):
+                        while( have_rows('faqs_questions-answers') ) : the_row();
+
+                            $question = get_sub_field('faqs_question');
+                            $answer = get_sub_field('faqs_answer');
+                            ?>
+                            <div class="faqs-section__qa-block-item">
+                                <div class="faqs-section__qa-block-question">
+                                    <p><?php echo $question; ?></p>
+                                    <svg class="faqs-section__arrow-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7762 8.65115C7.1345 8.30664 7.70424 8.31781 8.04875 8.67611L12.5 13.4014L16.9513 8.67611C17.2958 8.31781 17.8655 8.30664 18.2238 8.65115C18.5821 8.99567 18.5933 9.56541 18.2487 9.9237L13.1488 15.3237C12.9791 15.5002 12.7448 15.5999 12.5 15.5999C12.2552 15.5999 12.0209 15.5002 11.8513 15.3237L6.75125 9.9237C6.40674 9.56541 6.41791 8.99567 6.7762 8.65115Z" fill="#9A998E" />
+                                    </svg>
+                                </div>
+                                <div class="faqs-section__qa-block-answer">
+                                    <p><?php echo $answer; ?></p>
+                                </div>
+                            </div>
+                            <?php
+                        endwhile;
+                    endif;
+                ?>
+            </div>
         </div>
     </section>
 </main>
