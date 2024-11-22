@@ -502,3 +502,210 @@ p {
         }
     }
 }
+
+
+// -----------------------------
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    .hero-section {
+        &__content {
+            width: 100%;
+            margin-top: 60px;
+            padding-bottom: 30px;
+        }
+        &__text {
+            font-size: 30px;
+        }
+        &__buttons__calculator {
+            margin-bottom: 16px;
+        }
+    }
+
+    .hero-background-wrapper {
+        &__background-img {
+            display: none;
+        }
+    }
+
+    .home-section {
+        &__flex-wrapper {
+            padding: 0;
+            flex-direction: column;
+            justify-content: unset;
+            gap: 30px;
+            &__description {
+                margin: 0;
+            }
+        }
+    }
+
+    .new-games-section {
+        &__card {
+            border-radius: 20px;
+            padding: 40px 0;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        &__description {
+            width: 100%;
+            margin: 0 auto 60px;
+        }
+    }
+
+    .how-to-play{
+        &__container {
+            padding: 16px;
+        }
+        &__video-wrapper p {
+            width: 100%;
+        }
+    }
+
+    .magic-section {
+        &__flex-wrapper {
+            flex-direction: column;
+            justify-content: unset;
+            gap: 30px;
+            padding: 0;
+        }
+    }
+
+    .best-section {
+        &__description {
+            width: 100%;
+        }
+        &__card {
+            flex-direction: column;
+            gap: 16px;
+            padding: 14px;
+            &__text-features-container {
+                flex-direction: row;
+                height: 100%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .stories-section {
+        &__stories-container {
+            flex-direction: column;
+        }
+        &__item {
+            width: unset;
+            padding: 16px;
+        }
+    }
+
+    .news-section {
+        p {
+            width: 100%;
+        }
+        &__posts-container {
+            flex-direction: column;
+        }
+        &__post-item-image {
+            width: 100%;
+        }
+        &__post-item-heading {
+            width: 100%;
+        }
+    }
+
+    .right-now-section {
+        &__container {
+            padding: 16px;
+        }
+        &__container p {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .home-section {
+        &__flex-wrapper {
+            gap: 5px;
+        }
+        &__flex-wrapper img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .magic-section {
+        &__flex-wrapper {
+            gap: 5px;
+        }
+        &__flex-wrapper img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .best-section {
+        &__description {
+            width: 100%;
+        }
+        &__card {
+            flex-direction: column;
+            gap: 16px;
+            padding: 14px;
+            &__text-features-container {
+                flex-direction: row;
+                height: 100%;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .how-to-play{
+        &__container {
+            padding: 32px;
+        }
+        &__video-wrapper p {
+            width: 100%;
+        }
+    }
+
+    .right-now-section {
+        &__container {
+            padding: 32px;
+        }
+        &__container p {
+            width: 100%;
+        }
+    }
+
+    .news-section {
+        p {
+            width: 100%;
+        }
+        &__posts-container {
+            flex-direction: column;
+        }
+        &__post-item-image {
+            width: 100%;
+        }
+        &__post-item-heading {
+            width: 100%;
+        }
+    }
+}

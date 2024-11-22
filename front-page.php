@@ -18,7 +18,7 @@
         <?php 
             $image = get_field('hero__background-image');
             if( !empty( $image ) ): ?>
-                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy"/>
         <?php endif; ?>
     </div>
 </div>
@@ -29,7 +29,7 @@
                 <?php 
                     $image = get_field('home_section_image');
                     if( !empty( $image ) ): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy"/>
                 <?php endif; ?>
                 <div class="home-section__flex-wrapper__description">
                     <h5>Discover the Magic of Maxter cluster Pro</h5>
@@ -59,7 +59,7 @@
                         <p class="new-games-section__card-title"><?php echo $game_card_name; ?></p>
                         <?php 
                             if( !empty( $game_card_image ) ): ?>
-                                <img src="<?php echo esc_url($game_card_image['url']); ?>" alt="<?php echo esc_attr($game_card_image['alt']); ?>" />
+                                <img src="<?php echo esc_url($game_card_image['url']); ?>" alt="<?php echo esc_attr($game_card_image['alt']); ?>" loading="lazy"/>
                         <?php endif; ?>
                         <div class="new-games-section__card-text">
                             <div class="new-games-section__card-parameter-value">
@@ -102,7 +102,7 @@
                 <?php 
                     $image = get_field('magic_section_image');
                     if( !empty( $image ) ): ?>
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy"/>
                 <?php endif; ?>
             </div>
         </div>
@@ -124,7 +124,7 @@
                 <div class="best-section__card">
                     <?php 
                         if( !empty( $best_game_image ) ): ?>
-                            <img src="<?php echo esc_url($best_game_image['url']); ?>" alt="<?php echo esc_attr($best_game_image['alt']); ?>" />
+                            <img src="<?php echo esc_url($best_game_image['url']); ?>" alt="<?php echo esc_attr($best_game_image['alt']); ?>" loading="lazy"/>
                     <?php endif; ?>
                     <div class="best-section__card__text">
                         <?php
@@ -248,7 +248,7 @@
                                 <div class="stories-section__item__user-info-container">
                                     <?php 
                                         if( !empty( $photo ) ): ?>
-                                            <img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" />
+                                            <img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt']); ?>" loading="lazy"/>
                                     <?php endif; ?>
                                     <div>
                                         <p class="stories-section__item__user-info-container__name"><?php echo $name; ?></p>
@@ -282,7 +282,7 @@
                                 <?php 
                                     $image = get_field('post_image');
                                     if( !empty( $image ) ): ?>
-                                        <img class="news-section__post-item-image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                        <img class="news-section__post-item-image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" loading="lazy"/>
                                 <?php endif; ?>
                                 <p class="news-section__post-item-date"><?php the_field('post_date') ?></p>
                                 <h2 class="news-section__post-item-heading"><?php the_title(); ?></h2>
@@ -304,7 +304,6 @@
             </div>
         </div>
     </section>
-
     <section class="section right-now-section">
         <div class="right-now-section__container">
             <h5>Join the Magic Right Now</h5>

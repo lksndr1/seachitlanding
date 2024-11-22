@@ -31,3 +31,29 @@
         background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
     }
 }
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    .header {
+        &__wrapper {
+            flex-direction: column;
+            align-items: start;
+        }
+        &__menu-list-wrapper ul {
+            display: block;;
+        }
+        &__button {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1169px) {
+    .header {
+        &__menu-list-wrapper ul {
+            gap: 8px;
+        }
+        &__button {
+            margin-left: 0;
+        }
+    }
+}
