@@ -263,6 +263,48 @@
             </div>
         </div>
     </section>
+    <section class="section news-section">
+        <div class="container">
+            <h5>Stay up to date with Magical News</h5>
+            <p>Stay informed about everything that is happening in this exciting slots universe.</p>
+            <div class="news-section__posts-container">
+                <?php
+                    $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 4,
+                    );
+                    $query = new WP_Query($args);
+
+                    if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                            $query->the_post(); ?>
+                            <div class="news-section__post-item">
+                                <?php 
+                                    $image = get_field('post_image');
+                                    if( !empty( $image ) ): ?>
+                                        <img class="news-section__post-item-image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                <?php endif; ?>
+                                <p class="news-section__post-item-date"><?php the_field('post_date') ?></p>
+                                <h2 class="news-section__post-item-heading"><?php the_title(); ?></h2>
+                                <div class="news-section__post-item-tag">
+                                    <?php 
+                                    $tags = get_the_tags();
+                                    if ($tags) {
+                                        foreach ($tags as $tag) {
+                                            echo '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a> ';
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        <?php }
+                        wp_reset_postdata();
+                    }
+                ?>
+            </div>
+        </div>
+    </section>
+
     <section class="section right-now-section">
         <div class="right-now-section__container">
             <h5>Join the Magic Right Now</h5>
