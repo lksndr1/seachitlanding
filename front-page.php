@@ -171,6 +171,30 @@
             </div>
         </div>
     </section>
+    <section class="section how-to-play">
+        <div class="how-to-play__container">
+            <div class="how-to-play__video-wrapper">
+                <button class="how-to-play__play-button" onclick="playVideo(this)">
+                    <svg width="60" height="70" viewBox="0 0 60 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M60 35L-3.26266e-06 69.641L-2.34249e-07 0.358979L60 35Z" fill="#E4F357" />
+                    </svg>
+                </button>
+                <h5>Explore the special features</h5>
+                <p>Exciting twists and magic these games have to offer. Let the videos take you on an adventure full of fun</p>
+                <div class="video-container" style="display: none;">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/oe70Uhjc_F4?autoplay=1" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>            
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
