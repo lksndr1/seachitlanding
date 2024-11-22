@@ -429,3 +429,33 @@ p {
         }
     }
 }
+
+.right-now-section{
+    padding: 0;
+    background-color: $black-green-bg;
+    &__container {
+        background: linear-gradient(315deg, #223114 0%, #6a9a3c 13.74%, #537433 29.32%, #1e2b13 55.21%, #000 100%);
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 150px 0;
+        text-align: center;
+        p {
+            width: 770px;
+            color: #fff;
+            margin: 0 auto 60px;
+        }
+        button {
+            font-family: $teen;
+            font-weight: 700;
+            font-size: 18px;
+            color: $dark-green;
+            border: none;
+            border-radius: 4px;
+            padding: 16px 32px;
+            width: 158px;
+            height: 54px;
+            background: linear-gradient(180deg, #e4f357 0%, #a6b22e 100%);
+            margin-right: 30px;
+        }
+    }
+}

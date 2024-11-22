@@ -263,6 +263,13 @@
             </div>
         </div>
     </section>
+    <section class="section right-now-section">
+        <div class="right-now-section__container">
+            <h5>Join the Magic Right Now</h5>
+            <p>Discover magical games, exciting bonuses and unlimited adventures. The fun is just a click away!</p>
+            <button>Read more</button>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
